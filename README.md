@@ -1,4 +1,5 @@
-# Mein Portfolio
+## Name: Divinale Degwey Kouadjie
+## Emailadresse: divinale.degwey.kouadjie@mnd.thm.de# Mein Portfolio
 
 Das Projekt ist ein persönliches Portfolio, entwickelt mit Flutter, um eigene Projekte, Fähigkeiten und Kontaktdaten übersichtlich darzustellen. Es dient als digitale Visitenkarte und kann sowohl auf Desktop als auch mobil dargestellt werden
 
