@@ -1,17 +1,60 @@
 import 'package:flutter/material.dart';
-import 'package:testprojekt/pages/home_page.dart';
+import 'pages/slider_page.dart';
+import 'pages/profile_page.dart';
+import 'pages/settings_page.dart';
+import 'pages/summary_page.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'portfolio',home: HomePage(),
+      title: 'Portfolio App',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  final Map<String, dynamic> profileData = {};
+  final Map<String, bool> settingsData = {};
+  double sliderValue = 50;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Startseite')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              child: Text('Slider-Seite'),
+              onPressed: () => Navigator.push(context, MaterialPageRoute(
+                  builder: (_) => SliderPage())),
+            ),
+            ElevatedButton(
+              child: Text('Profilseite'),
+              onPressed: () => Navigator.push(context, MaterialPageRoute(
+                  builder: (_) => ProfileFormPage())),
+            ),
+            ElevatedButton(
+              child: Text('Einstellungen'),
+              onPressed: () => Navigator.push(context, MaterialPageRoute(
+                  builder: (_) => SettingsPage())),
+            ),
+            ElevatedButton(
+              child: Text('Zusammenfassung'),
+              onPressed: () => Navigator.push(context, MaterialPageRoute(
+                  builder: (_) => SummaryPage())),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
